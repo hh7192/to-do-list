@@ -46,6 +46,10 @@ function updateUI() {
 
   //   show the result on the DOM
   list.innerHTML = result;
+
+  // in case of empty array
+  if (todolist.length === 0)
+    return (list.innerHTML = "<h3>There is no item in the list!</h3>");
 }
 
 updateUI();
