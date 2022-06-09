@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/solar/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>HamidreZa | To Do List</title>
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <div class="display-4 text-center">
+        <h1>
+          <i class="fa fa-check-square text-primary p-3" aria-hidden="true"></i
+          >My <span class="text-primary">To Do</span> List
+        </h1>
+      </div>
+      <form id="todo-form">
+        <div class="form-group">
+          <label for="item">ITEM</label>
+          <input
+            type="text"
+            id="todo-item"
+            class="form-control"
+            placeholder="Enter your to do item"
+            required
+            maxlength="1000"
+          />
+        </div>
+        <span id="error"></span>
+        <button
+          id="add-button"
+          class="btn btn-lg btn-success float-end mt-3 mb-5"
+        >
+          ADD ITEM
+        </button>
+      </form>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>To Do Item</th>
+            <th>Status</th>
+            <th>Did it!</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list"></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
